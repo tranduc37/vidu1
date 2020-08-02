@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*--body--*/
+.container {
+  font-family: sans-serif;
+  background-color:red;
+} 
+
+.container .menu ul {
+  list-style-type: none;
+  text-align: center;
+}
+.container .menu ul li {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 40px;
+}
+.container .menu ul li a {
+  text-decoration: none;
+  display: block;
+}
+.container .menu ul li a:hover {
+  background-color: #333;
+  color: yellow;
+}

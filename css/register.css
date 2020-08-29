@@ -1,0 +1,78 @@
+* {
+  margin:0;
+  padding:0;
+} 
+
+body {
+  background:#3d3d;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+form {
+  padding:20px 30px;
+}
+.form-control {
+  margin-bottom:20px;
+  padding-bottom: 100px;
+  position: relative;
+}
+.form-control label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.form-control input {
+  border: 1px solid #f0f0f0;
+  display:block;
+  border-radius: 4px;
+  width: 100%;
+}
+.form-control i {
+  position:absolute;
+  top: 45px;
+  right:20px;
+  visibility: hidden;
+}
+.form-control small {
+  position:absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.form .success input {
+  border-color:#3d3d;
+}
+.form .success i.fa-check-circle {
+  visibility: visible;
+  color: #3d3d;
+}
+.form .errol i.fa-exclamation-circle {
+  visibility: visible;
+  color: #3d3d;
+  color:red;
+}
+.form .errol input {
+  border-color:red;
+}
+.header {
+  padding:20px 40px;
+}
+.header h2 {
+  color:red;
+  text-align: center;
+  font-weight: bold;
+}
+.container {
+  background:#f1f1f1;
+  width: 500px;
+  max-width: 100%;
+}
+button {
+  text-align: center;
+  background:#3d3d;
+  width: 100%;
+  margin-bottom:35px;
+  border-radius: 4px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    label {
+      color:#333;
+      display: inline-block;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <form id="form">
+    <div>
+      <label>username</label>
+      <input type="text" placeholder="Username" id="username">
+      <span id = "errorname"></span> 
+    </div>
+    <div>
+      <label>email</label>
+      <input type="text" placeholder="Ducnt@gmail.com" id="email">
+      <span id = "erroremail"></span> 
+    </div>
+    <div>
+      <label>password</label>
+      <input type="text" placeholder="password" id="password">
+      <span id = "errorpassword"></span> 
+    </div>
+  </form>
+  <button onclick="checkInput()">Submit</button>
+  <div id="showinput"></div>
+  <script>
+    var form = document.getElementById('form').value;
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    function checkInput() {
+      if(username== "" ){
+        document.getElementById('errorname').innerHTML = "vui long nhap dung username cua ban";
+        document.querySelector('span').style.color ='red';
+      } else {
+        document.getElementById('errorname').innerHTML = "";
+      }
+
+      if(email===""){
+        document.getElementById('erroremail').innerHTML = "vui long nhap dung email cua ban";
+        document.querySelector('#erroremail').style.color ='red';
+      } else {
+        document.getElementById('erroremail').innerHTML = "d";
+      }
+
+      if(password==""){
+        document.getElementById('errorpassword').innerHTML = "vui long dung mat khau cua ban"; 
+        document.querySelector('#errorpassword').style.color ='red';
+      } else {
+        document.getElementById('errorpassword').innerHTML = "";
+      }
+
+      if(username && email && password) {
+        info = "username";
+        info += "email";
+        info += "password";
+      }
+      
+      document.getElementById('showinput').innerHTML = info;
+    }
+  </script>
+</body>
+</html>

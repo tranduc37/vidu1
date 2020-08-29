@@ -4,26 +4,228 @@
 }
 
 /*--body--*/
-.container {
-  font-family: sans-serif;
-  background-color:red;
-} 
+.wrapper .no_index .top_index {
+  background-color:black;
+  color:white;
+}
 
-.container .menu ul {
+.wrapper .no_index .nav_main .container ul {
   list-style-type: none;
+  justify-content: space-between;
   text-align: center;
 }
-.container .menu ul li {
+.wrapper .no_index .nav_main .container ul li {
   display: inline-block;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 20px;
+  position: relative;
+  z-index: 1;
 }
-.container .menu ul li a {
+.wrapper .no_index .nav_main .container ul li a {
   text-decoration: none;
   display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color:gray;
 }
-.container .menu ul li a:hover {
+.wrapper .no_index .nav_main .container ul li a:hover {
   background-color: #333;
   color: yellow;
 }
+/*-search-*/
+.searchbar{
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 50px;
+  background-color: #353b48;
+  border-radius: 30px;
+  padding: 10px;
+  }
+
+  .search_input{
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color:transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+  }
+
+  .searchbar:hover > .search_input{
+  padding: 0 10px;
+  width: 210px;
+  caret-color:red;
+  transition: width 0.4s linear;
+  }
+
+  .searchbar:hover > .search_icon{
+  background: white;
+  color: #e74c3c;
+  }
+
+  .search_icon{
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color:white;
+  text-decoration:none;
+  }
+/*-logo-*/
+.logo a {
+  text-decoration: none;
+  color: white;
+  line-height:50px;
+  text-transform: uppercase;
+  font-family: inherit;
+} 
+/*-Cart shopping-*/
+.cart_shopping a i{
+  line-height:48px;
+  color:white;
+  font-size:20px;
+  padding:0 10px;
+}
+/*--sub menu--*/
+.sub_menu {
+  background-color:black;
+  justify-content:space-between; 
+  margin-left: -77px;
+}
+.sub_menu li {
+  display: block;
+  list-style-type: none;
+  width: 220px;
+}
+.sub_menu li a {
+  text-decoration: none;
+  display: block;
+}
+.wrapper .no_index .nav_main .container ul li > .sub_menu {
+  display: none;
+  position: absolute;
+  width: 400px;
+}
+.wrapper .no_index .nav_main .container ul li:hover .sub_menu {
+  display: block;
+}
+/*--main--*/
+
+/*-Slide-*/
+.carousel-inner img {
+  max-width: 100%;
+}
+
+/*-Company's policy-*/
+.policy {
+  background-color:black;
+}
+.a {
+  text-decoration: none;
+}
+.policy_text{
+  text-align: center;
+  color:#f1f1f1;
+  margin-top: 14px;
+}
+.policy_section2 {
+  margin:0 -10px;
+}
+
+/*-test policy-*/
+.test_policy {
+  display:grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  margin-bottom: 10px;
+  margin-top: -13px;
+}
+.test_policy .test {
+  background-color:red;
+  text-align: center;
+  font-weight: bold;
+  padding:20px;
+}
+.test_policy .test a {
+  text-decoration:none;
+  color:white;
+}
+.test_policy .test:nth-child(odd) {
+  background-color:#222;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+/* topsale_product */
+#top_product .container .row {
+  margin-top: 40px;
+}
+
+/* product_topsale */
+.product_topsale {
+  position:relative;
+}
+.product_topsale a {
+  display:block;
+}
+.product_topsale:hover > .cap_xxx {
+  display: block;
+}
+.cap_xxx {
+  position:absolute;
+  bottom:0;
+  right:0;
+  left:0;
+  display:none;
+  border:1px solid black;
+}
+
+/* .test_policy {
+  display: block;
+} */
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  /* Styles */
+  .test_policy {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  .menu-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) { 
+
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+ }

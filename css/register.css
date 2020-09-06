@@ -48,12 +48,12 @@ form {
   visibility: visible;
   color: #3d3d;
 }
-.form .errol i.fa-exclamation-circle {
+.form .error i.fa-exclamation-circle {
   visibility: visible;
   color: #3d3d;
   color:red;
 }
-.form .errol input {
+.form .error input {
   border-color:red;
 }
 .header {

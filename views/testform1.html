@@ -29,17 +29,25 @@
       <input type="text" placeholder="password" id="password">
       <span id = "errorpassword"></span> 
     </div>
+    <button type="submit">Submit</button>
   </form>
-  <button onclick="checkInput()">Submit</button>
+  <!-- <button onclick="checkInput()">Submit</button> -->
   <div id="showinput"></div>
   <script>
-    var form = document.getElementById('form').value;
-    var username = document.getElementById('username').value;
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+    form = document.getElementById('form');
+    form.addEventListener('submit', (e) => {
+      console.log('aaaaa');
+      e.preventDefault();
+      checkInput();
+    });
 
     function checkInput() {
-      if(username== "" ){
+      var form = document.getElementById('form').value;
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      if(username == "" ){
         document.getElementById('errorname').innerHTML = "vui long nhap dung username cua ban";
         document.querySelector('span').style.color ='red';
       } else {
@@ -50,7 +58,7 @@
         document.getElementById('erroremail').innerHTML = "vui long nhap dung email cua ban";
         document.querySelector('#erroremail').style.color ='red';
       } else {
-        document.getElementById('erroremail').innerHTML = "d";
+        document.getElementById('erroremail').innerHTML = "";
       }
 
       if(password==""){
@@ -61,12 +69,14 @@
       }
 
       if(username && email && password) {
-        info = "username";
-        info += "email";
-        info += "password";
+        info = "ten cua ban la&nbsp;" + username + "</br>";
+        info += "email cua ban la&nbsp;" + email + "</br>";
+        info += "password cua ban la&nbsp;" + password;
+
+        document.getElementById('showinput').innerHTML = info;
+
       }
       
-      document.getElementById('showinput').innerHTML = info;
     }
   </script>
 </body>
